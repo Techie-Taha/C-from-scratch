@@ -1,0 +1,44 @@
+__1___
+Way of defining the basic of C++
+
+#include<iostream> 
+include namespace std;
+int main(){                  Basic way
+    cout << "Hello";
+    return 0;
+
+
+}
+___2___
+If we want to add a new line we just gonna do
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello";
+    cout << endl; # this endl needs to be written like this, can't be "endl". This endl creates a new line of code
+    cout << "Hello world";
+
+    return 0;
+
+
+  }
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello";
+    cout << "\n"; # this \n needs to be written like this, can't be \n. This \n creates a new line of code
+    cout << "Hello world";
+    we could also do, cout << "Hello\n"; like this
+
+  }
+
+  Or we can write the whole code in one line, we allowed to that as well.
+
+#include <iostream>
+using namespace std;
+int main(){
+    cout << "Hello world" << endl << "Hello" << "Taha" << "\n"; // don't type cout multiple times.
+  } // in the terminal we will see 
+Hello world
+Hello
+Taha

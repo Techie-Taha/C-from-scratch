@@ -1,0 +1,159 @@
+___1___
+
+#include <iostream> // iostream(input output stream) is just a file from standard library
+using namespace std;
+int main() {
+    cout << "4+2"; //nothing will change since just a string, 4+2 in the terminal
+    cout << endl;
+    cout << 4; // nothing will change since just a integer, 4 in the terminal
+    cout << endl;
+    cout << 4+2; // will add ot, 6 in the terminal
+    cout << endl;
+    cout << "4"; // //nothing will change since just a string, 4+2 in the terminal
+
+    return 0;
+}
+
+___2___
+#include <iostream> // iostream(input output stream) is just a file from standard library
+using namespace std;
+int main() {
+    int x; // here x is a varible which is an integer. This is how we write, like int x means x variable. 
+    x = 5; // now inside of this of varible or container we have a number, which is 5
+    //cout << x*5; // we can add, substract, multiply and divide like this 
+// don't do "x", it will print x, since it's a string
+    
+    int z;
+    z = 8; // we can define multiple variables
+    cout << x;
+    cout << endl;
+    cout << z;
+    cout << endl;
+    cout << x+z; // we can also print it like this, like + - * /. But make sure to write the cout statement once you are done defining variable
+    return 0;
+
+}
+
+___3___
+more ways of defining mutiple variable
+#include <iostream> 
+using namespace std;
+int main() {
+    int x; // instead of writing like this we could do int x = 5;
+    x = 5; // instead of writing like this we could do int x = 5;
+    int z; // instead of writing like this we could do int z = 8;
+    z = 8; // instead of writing like this we could do int z = 8;
+    cout << x;
+    cout << endl;
+    cout << z;
+    cout << endl;
+    cout << x+z; 
+    return 0;
+
+}
+
+___4___
+Integers
+// instead of writing like that we can also do,
+#include <iostream>
+using namespace std;
+int main() {
+
+int x,y;
+x = 5;
+z = 8;
+cout << x << endl << z; // in the terminal we will see 5 then in the next line 6
+}
+
+___5___
+
+we could also write 
+#include <iostream> 
+using namespace std;
+int main() {
+int x = 5, z = 8; 
+cout << x+y; // we can also print it like this, like + - * /.
+return 0; 
+}
+
+NOTE = We can do both declaration and initialization in the same line
+
+___6___
+updation of integers
+#include <iostream> // iostream(input output stream) is just a file from standard library
+using namespace std;
+int main() {
+    int x = 5;
+    cout << x <<endl; 
+    x = 8;
+    cout <<x;
+
+return 0; 
+
+}
+-----Another one 
+#include <iostream> // iostream(input output stream) is just a file from standard library
+using namespace std;
+int main() {
+    int x = 5;
+    cout << x <<endl; 
+    x = x+8; // first it will print out 5, then 13, like we updated the value of x
+    cout <<x;
+
+return 0; 
+
+
+}
+
+___7___
+arthmetic operator between int and float
+#include <iostream> 
+using namespace std;
+int main() {
+    int x = 5; // it's x = 5 
+    x+=5; // now it's x = 10
+    cout << x << endl; // printed x = 10 in the terminal
+    x+=5; // now x = 15
+    cout << x << endl; // printed x = 15 in the terminal
+    float y = 6.1; // y = 6.1
+    cout << x << endl << y << endl; // printed x = 15, y = 6,1 in the next line
+    y+=1; // now y = 7.1
+    cout << x/y; // 15  divided 7.1 which us 2.11268  in the terminal
+
+// arithmetic oppeeation between float and integers
+return 0;
+
+}
+---8---
+float and updation of float is same as integers
+#include <iostream> 
+using namespace std;
+int main() {
+    float y = 6.1; 
+    //cout << y << endl;
+    y+=1;
+    cout << y; 
+
+return 0;
+
+
+}
+___9___
+Post Pre increment
+#include <iostream> 
+using namespace std;
+int main() {
+    int x = 6; 
+    cout << x <<endl; // 6 in the terminal
+// example of post increment
+    cout << x++ <<endl; // first it will print 6 again, then will increment the value by one 
+    cout << x <<endl; // here will print 7
+
+    int y = 7; 
+    cout << y <<endl; // 7 in the terminal
+// example of pre increment
+    cout << ++y <<endl; // first, it will increment the value by one then will print 8
+    cout << y <<endl; // here will print 8 again
+
+return 0;
+}
