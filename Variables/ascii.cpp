@@ -1,12 +1,13 @@
 #include <iostream> 
 using namespace std;
 int main() {
-    char x; // deine as char
-    x = '1'; // write in a single quote
-    int y = (int)x;
-    cout << y; // in the terminal we will see a
+    char x;
+    x = '8';
+    int y = (int)x; // so we used typecasting to find the ascii value of character '8'
+    cout << y;
 
 
 
+   
 return 0;
 }

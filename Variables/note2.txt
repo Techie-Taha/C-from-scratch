@@ -239,3 +239,52 @@ return 0;
 
 ___14___
 Hierarchy operator or precedence
+#include <iostream> 
+using namespace std;
+int main() {
+    float b;
+    b = 7/22*(3.14+2)*3/5; 
+    
+    
+    // first the operation within the the bracket will happen which is 5.14, then it will perform the operation from left to right
+    //7/22 which is 0.3181818182 multiplied by 5.14 then multipled by 3 then divided by 5
+    cout << b << endl; // in the terminal we will see 0
+
+    int a; 
+    a = 4 + 2 % -8; // just like division multiplication, modulus operator also have first priority.
+    //  2 % -8 where 2 is divided by 8, where the remainder is in decimal and we don't want that. So output is 2 then added by 4. 
+    cout <<a;
+
+return 0;
+}
+___15___ 
+char data type 
+#include <iostream> 
+using namespace std;
+int main() {
+    char x; // deine as char
+    x = 'a'; // write in a single quote
+    cout << x; // in the terminal we will see a
+
+
+
+return 0;
+}
+// use the data type char first of all to define a variable, and make sure to write it in single quote
+
+___16___
+ASCII values
+// remember these 3 values, lowwr case a = 97, upper case A = 65, 0 = 48
+#include <iostream> 
+using namespace std;
+int main() {
+    char x;
+    x = '8';
+    int y = (int)x; // so we used typecasting to find the ascii value of character '8'
+    cout << y;
+// first define a character, then use type casting to convert it's value into ascii value
+
+
+   
+return 0;
+}
