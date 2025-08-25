@@ -1,4 +1,4 @@
-#include <iostream> // iostream(input output stream) is just a file from standard library
+#include <iostream>
 using namespace std;
 int main() {
     int x = 5;

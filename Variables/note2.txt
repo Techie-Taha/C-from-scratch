@@ -157,3 +157,85 @@ int main() {
 
 return 0;
 }
+___10___
+Varibale naming rules
+commas and blanks are not allowed. Names that are not allowed is auto, double, int, break, extern, enum, unsigned, while, case, sizeof, for, const, static, 
+long, continue, float, else, signed, do, short, switch, char, volatile, default, goto, struct, if, union, return, void, register, typeof
+
+___11___
+taking input
+#include <iostream> 
+using namespace std;
+int main() {
+
+    int x;
+    cin >> x; // cin >> x; ask the user to enter anything, let's say we put 6
+    cout << x*x*x; // in the terminal we will see the cube root of 6 which is 216
+
+
+
+return 0;
+}
+Also finding the sum 
+#include <iostream> 
+using namespace std;
+int main() {
+
+    int x, y;
+    cout << "Enter number x: "; // dont have to put endl
+    cin >> x; // cin >> x; ask the user to enter anything, let's we put 6
+    cout << "Enter number y: ";
+    cin >> y;
+
+    cout << "The sum is " << x+y; // in the terminal we will see the cube root of 6 which is 216
+
+
+
+return 0;
+}
+
+___12___
+modulus operator helps o find the remainder
+#include <iostream> 
+using namespace std;
+int main() {
+
+    int x, y;
+    cout << "Enter number x: "; // dont have to put endl
+    cin >> x; // cin >> x; ask the user to enter anything, let's we put 6
+    cout << "Enter number y: ";
+    cin >> y;
+
+    cout << "The answer is " << x%y; // x = 9, y = 3, in the terminal we will see 0, since there's no remainder. it's called remainder in python
+
+
+return 0;
+}
+//important points : 2 % 8 = 2, because if we divide it we get some decimal values and we don't want that. 
+// 6 % -5 = 1, like even though we have -5, in the terminal we will see 1
+// -6 % 5 = -1, but if we have - value at the front, in the terminal we will see - as an answer
+
+___13___
+
+type casting; where we basically we convert int values into decimal
+// Take integer 'x' as input and print half of the number
+#include <iostream> 
+using namespace std;
+int main() {
+
+    int x;
+    x = 5;
+    float y = (float)x;
+    cout << y/2; // in the terminal we see 2.5
+    //cout << x; // in the terminal we see 2, 
+
+/* but the answer was supposed to be 2.5, we can fix it by converting int to float but according to question it has
+to int, so we have to use typecasting.
+*/
+
+
+return 0;
+}
+
+___14___
+Hierarchy operator or precedence
