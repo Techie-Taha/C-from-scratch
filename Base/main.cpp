@@ -10,6 +10,5 @@ int main() {
 // :: helps to sind the function
     
 
-    return 0;
-
+return 0;
 }

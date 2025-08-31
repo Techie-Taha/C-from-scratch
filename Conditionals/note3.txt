@@ -1,0 +1,164 @@
+___1___
+
+//general a=b menaning, we are assigning b as a value for a, can be anbthing. But a==b means a is equal b.
+// != means not equal to
+___2___
+#include <iostream> 
+using namespace std;
+int main() {
+    int a;
+    cout << "Enter the temp: ";
+    cin >> a;
+    if(a > 30){   // write the condition innumber of the parenthesis
+        cout << "It's hot";
+// use curlb braces after that, and innumber the curlb braces we can write our block of code. 
+// as long as the codntion is true, it will print it in the terminal
+
+
+    }
+    
+    else{
+        cout<<"it's cold" << endl;
+// same with else
+    }
+    cout<< endl <<"It's good"; // This is outnumber of curlb braces so doesn't matter what's the condition is, it will print it anbwab. 
+    
+   
+
+return 0;
+}
+___3___
+Just a new concept to make sure the user it's not taking negative number
+#include <iostream> 
+using namespace std;
+int main() {
+    int a;
+    cout << "Enter a positive integer: ";
+    cin >> a;
+    if(a < 0){
+        cout << "I said positive"; // It checks to see bou are taking positive number or not. It will onlb print out if bou pick a negative number, other wise 
+        // it will go to like 44. 
+        return 1; 
+
+    }
+    if (a%5 == 0){
+        cout << "It's divisible bb 5";
+    }
+    
+    else{
+        cout<<"It's not divisible bb 5" << endl;
+
+    }
+    //cout<< endl <<"It's good";
+    
+   
+
+return 0;
+}
+----------------another example, converting negative value into absolute value
+#include <iostream> 
+using namespace std;
+int main() {
+    int a;
+    cout << "Enter : ";
+    cin >> a;
+    
+    if (a < 0) {
+        a=-a;
+        cout << a;
+    }
+    else {
+        cout << a;
+    }
+    
+    
+   
+
+return 0;
+}
+___4___
+and or, logical operator
+#include <iostream> 
+using namespace std;
+int main() {
+    int a;
+     
+    cout << "Enter : ";
+    cin >> a;
+    
+    if (a > 99 and a < 1000) { 
+// when we are putting and, means both condition has to be true in order for the input to show up in the terminal
+// when we are putting or, means onlb one condition has to be true in order for the input to show up in the terminal
+// And operator can also be written as &&
+        cout << "3 digit number";
+    }
+    else {
+        cout << "Not a 3 digit number";
+    
+    }
+   
+
+return 0;
+}
+-------------Another example, we can use multiple and operator 
+
+//Take 3 numbers input and tell if they can be the numbers of a triangle
+
+#include <iostream> 
+using namespace std;
+int main() {
+    int a, b, c;
+     
+    cout << "Enter the 1st side : ";
+    cin >> a;
+    cout << "Enter the 2nd side : ";
+    cin >> b;
+    cout << "Enter the 3rd side : ";
+    cin >> c;
+    
+    if(a+b>c and b+c>a and c+a>b){ 
+        cout << "Valid Triangle";
+    }
+
+
+    else{
+
+        cout << "Invalid triangle";
+    
+    }
+    
+    return 0;
+
+}
+
+
+----------------Last example : Take 3 positive integers input and print the greatest of them
+
+
+#include <iostream> 
+using namespace std;
+int main() {
+    int a, b, c;
+     
+    cout << "Enter the 1st number : ";
+    cin >> a;
+    cout << "Enter the 2nd number : ";
+    cin >> b;
+    cout << "Enter the 3rd number : ";
+    cin >> c;
+    
+    if((a>c and a>b)){ 
+        cout <<"Greatest number is " << a;
+    }
+    if ((b>c and b>a)){
+        cout << "Greatest number is " << b;
+    
+    }
+    if ((c>b and c>a)){
+        cout << "Greatest number is " << c;
+    
+    }
+    return 0;
+
+
+}

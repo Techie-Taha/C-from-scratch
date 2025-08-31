@@ -206,7 +206,7 @@ int main() {
     cout << "Enter number y: ";
     cin >> y;
 
-    cout << "The answer is " << x%y; // x = 9, y = 3, in the terminal we will see 0, since there's no remainder. it's called remainder in python
+    cout << "The answer is " << x%y; // x = 9, y = 3, like 9 over 3, in the terminal we will see 0, since there's no remainder. it's called remainder in python
 
 
 return 0;
