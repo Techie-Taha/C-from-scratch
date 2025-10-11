@@ -1,0 +1,53 @@
+___1___
+for loop. 3 parameters
+int i which is the initialization that happens for only once
+steps: 
+1) Check the condtion, if true the print whatever is in the loop
+2) then increament like i++, if i = 1 before, now it's 2, then check the condtion again and if true then print the result or break the loop.
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+
+
+
+// Initialization which happens only for once, i = 1;
+// condtion, i < 5; if true then print the result "I love you". In the terminal I love you
+// then i++ means increament the value by 1, check condition again, is 2 less than 5, yes. If true then print the result I love you again, if not then break the loop
+
+
+for(int i = 1; i < 5; i++){
+    cout << "I love you" << endl;
+}
+
+    //return 0;
+}
+___2___
+// Print all the even numbers from 1 to 10
+// Code remains the same just before printing the result, put a condition, like only print if it's true. 
+
+#include<iostream>
+using namespace std;
+int main(){
+    
+
+
+----------for even
+
+for(int i = 1; i <= 10; i++){
+    if(i % 2 == 0){
+        cout << i << endl; // before printing just put a condition. just print i
+    }
+}
+
+---------for odd
+
+for(int i = 1; i <= 10; i++){
+    if(i % 2 != 0){
+        cout << i << endl; // before printing just put a condition. just print i
+    }
+}
+
+    return 0;
+}
