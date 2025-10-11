@@ -7,9 +7,9 @@ int main() {
     cout << endl;
     cout << 4; // nothing will change since just a integer, 4 in the terminal
     cout << endl;
-    cout << 4+2; // will add ot, 6 in the terminal
+    cout << 4+2; // will add on, 6 in the terminal
     cout << endl;
-    cout << "4"; // //nothing will change since just a string, 4+2 in the terminal
+    cout << "4"; // nothing will change since just a string, 4+2 in the terminal
 
     return 0;
 }
@@ -19,8 +19,8 @@ ___2___
 using namespace std;
 int main() {
     int x; // here x is a varible which is an integer. This is how we write, like int x means x variable. 
-    x = 5; // now inside of this of varible or container we have a number, which is 5
-    //cout << x*5; // we can add, substract, multiply and divide like this 
+    x = 5; // now inside of this varible or container we have a number, which is 5
+    // cout << x*5; // we can add, substract, multiply and divide like this 
 // don't do "x", it will print x, since it's a string
     
     int z;
@@ -106,7 +106,7 @@ return 0;
 }
 
 ___7___
-arthmetic operator between int and float
+arithmetic operator between int and float
 #include <iostream> 
 using namespace std;
 int main() {
@@ -116,11 +116,11 @@ int main() {
     x+=5; // now x = 15
     cout << x << endl; // printed x = 15 in the terminal
     float y = 6.1; // y = 6.1
-    cout << x << endl << y << endl; // printed x = 15, y = 6,1 in the next line
+    cout << x << endl << y << endl; // printed x = 15, y = 6.1 in the next line
     y+=1; // now y = 7.1
     cout << x/y; // 15  divided 7.1 which us 2.11268  in the terminal
 
-// arithmetic oppeeation between float and integers
+// arithmetic operation between float and integers
 return 0;
 
 }
@@ -144,16 +144,16 @@ Post Pre increment
 using namespace std;
 int main() {
     int x = 6; 
-    cout << x <<endl; // 6 in the terminal
+    cout << x << endl; // 6 in the terminal
 // example of post increment
-    cout << x++ <<endl; // first it will print 6 again, then will increment the value by one 
-    cout << x <<endl; // here will print 7
+    cout << x++ << endl; // first it will print 6 again, then will increment the value by one 
+    cout << x << endl; // here will print 7
 
     int y = 7; 
-    cout << y <<endl; // 7 in the terminal
+    cout << y << endl; // 7 in the terminal
 // example of pre increment
-    cout << ++y <<endl; // first, it will increment the value by one then will print 8
-    cout << y <<endl; // here will print 8 again
+    cout << ++y << endl; // first, it will increment the value by one then will print 8
+    cout << y << endl; // here will print 8 again
 
 return 0;
 }
@@ -187,7 +187,7 @@ int main() {
     cout << "Enter number y: ";
     cin >> y;
 
-    cout << "The sum is " << x+y; // in the terminal we will see the cube root of 6 which is 216
+    cout << "The sum is " << x+y;
 
 
 
@@ -195,7 +195,7 @@ return 0;
 }
 
 ___12___
-modulus operator helps o find the remainder
+modulus operator helps o find the remainder, let's say 2 % 6. So 2 as a numerator and and 6 denominator. 
 #include <iostream> 
 using namespace std;
 int main() {
@@ -253,7 +253,7 @@ int main() {
     int a; 
     a = 4 + 2 % -8; // just like division multiplication, modulus operator also have first priority.
     //  2 % -8 where 2 is divided by 8, where the remainder is in decimal and we don't want that. So output is 2 then added by 4. 
-    cout <<a;
+    cout << a;
 
 return 0;
 }

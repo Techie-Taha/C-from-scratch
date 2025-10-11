@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
     int x; // here x is a varible which is an integer. This is how we write, like int x means x variable. 
-    x = 5; // now inside of this of varible or container we have a number, which is 5
+    x = 5; // now inside of this varible or container we have a number, which is 5
     //cout << x*5; // we can add, substract, multiply and divide like this 
 // don't do "x", it will print x, since it's a string
     

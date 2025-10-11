@@ -10,10 +10,10 @@ int main() {
     
     if (costPrice < sellingPrice) {
         
-        cout << "Profit is " << sellingPrice - costPrice <<"$";
+        cout << "Profit is " << sellingPrice - costPrice << "$";
     }
     else if (costPrice > sellingPrice) {
-        cout << "Yu lost " << costPrice - sellingPrice <<"$";
+        cout << "You lost " << costPrice - sellingPrice << "$";
     }
     else if (costPrice == sellingPrice) {
         cout << "No profit no loss";

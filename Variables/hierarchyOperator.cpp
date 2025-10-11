@@ -11,8 +11,8 @@ int main() {
 
     int a; 
     a = 4 + 2 % -8; // just like division multiplication, modulus operator also have first priority.
-    //  2 % -8 where 2 is divided by 8, where the remainder is in decimal and we don't want that. So output is 2 then added by 4. 
-    cout <<a <<endl;
+    //  2 % -8 where 2 is the numerator and 8 is the denominator, where the remainder is in decimal and we don't want that. So output is 2 then added by 4. 
+    cout << a << endl;
 
 
 

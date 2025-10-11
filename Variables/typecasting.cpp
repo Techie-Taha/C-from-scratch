@@ -1,4 +1,4 @@
-// tkae integer "x" as input and print half of the number
+// take integer "x" as input and print half of the number
 #include <iostream> 
 using namespace std;
 int main() {
@@ -10,9 +10,8 @@ int main() {
     //cout << x; // in the terminal we see 2, 
 
 /* but the answer was supposed to be 2.5, we can fix it by converting int to float but according to question it has
-to int, so we have to use typecasting.
+be int, so we have to use typecasting.
 */
-
 
 return 0;
 }

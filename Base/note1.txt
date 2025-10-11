@@ -32,13 +32,4 @@ int main(){
 
   }
 
-  Or we can write the whole code in one line, we allowed to that as well.
-
-#include <iostream>
-using namespace std;
-int main(){
-    cout << "Hello world" << endl << "Hello" << "Taha" << "\n"; // don't type cout multiple times.
-  } // in the terminal we will see 
-Hello world
-Hello
-Taha
+  Or we can write the whole code in one line, we are allowed to that as well.

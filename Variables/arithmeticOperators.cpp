@@ -7,7 +7,7 @@ int main() {
     x+=5; // now x = 15
     cout << x << endl; // printed x = 15 in the terminal
     float y = 6.1; // y = 6.1
-    cout << x << endl << y << endl; // printed x = 15, y = 6,1 in the next line
+    cout << x << endl << y << endl; // printed x = 15, y = 6.1 in the next line
     y+=1; // now y = 7.1
     cout << x/y; // 15  divided 7.1 which us 2.11268  in the terminal
 

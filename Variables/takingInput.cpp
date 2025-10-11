@@ -8,7 +8,7 @@ int main() {
     cout << "Enter number y: ";
     cin >> y;
 
-    cout << "The sum is " << x+y; // in the terminal we will see the cube root of 6 which is 216
+    cout << "The sum is " << x+y; // in the terminal we will see the sum
 
 
 

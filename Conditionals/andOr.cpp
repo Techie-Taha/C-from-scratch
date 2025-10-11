@@ -3,16 +3,26 @@ using namespace std;
 int main() {
     int x;
      
-    cout << "Enter : ";
-    cin >> x;
+    cout << "Enter x : ";
+    cin >> x ;
+    
     
     if (x > 99 and x < 1000) { // and operator can also be written as &&
     
-        cout << "3 digit number";
+        cout << "3 digit number" << endl;
+    }
+
+    int y;
+
+    cout << "Enter y : ";
+    cin >> y;
+
+
+    if (y < 10 || y > 20){ // or
+        cout << "Hi";
     }
     else {
-        cout << "Not a 3 digit number";
-    
+        cout << "Bye";
     }
    
 
