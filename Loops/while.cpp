@@ -2,8 +2,8 @@
 using namespace std;
 int main(){
    
-    int i; 
-    while(i = 10){
+    int i = 1; // initialization
+    while(i <= 10){
         cout << i << endl;
         i++;
     }
