@@ -9,7 +9,7 @@ int main(){
     int count = 0;
 
     while(n != 0){ 
-        n = n/10;
+        n = n/10; // This is the main part
         
         count++;
     }
