@@ -1,0 +1,73 @@
+___1___
+// Rectangle
+
+#include<iostream>
+using namespace std;
+int main(){
+
+  
+    int m, n;
+    cin >> m; // m is the number of rows
+    cin >> n; // n is the number of columns
+    for( int i = 1; i <= m; i++){ // This line takes the rows
+        for(int j = 1; j <= n; j++){ // This lines takes the columns
+            cout << "* "; 
+        }
+        cout << endl;
+    }
+
+return 0;
+}
+// Line 13 will only start  when the condition in line 12 is true. Once the condition in line 12 is true, the loop starts from 12 to 16, after that the value of i increases to 2. 
+
+___2___
+
+// write a Square pattern with 12345 when n = 5;
+
+#include<iostream>
+using namespace std;
+int main(){
+
+  
+    int n;
+   // since square we can have only one variable for both rows and columns
+    cin >> n; // n is the number of columns
+    for( int i = 1; i <= n; i++){
+        for(int j = 1; j <= n; j++){
+            cout << j; // printing j will give us 12345 
+        }
+        cout << endl;
+    }
+
+return 0;
+}
+
+__ 3___
+// Triangle
+#include<iostream>
+using namespace std;
+int main(){
+
+  
+    int m;
+    cin >> m;
+   
+   
+    for( int i = 1; i <= m; i++){
+        for(int j = 1; j <= i; j++){
+            cout << "* "; 
+        }
+        cout << endl;
+    }
+
+return 0;
+}
+
+// Here's whats happening :
+// Lets say m = 5; i = 1 which is less than m, condition true, enters inside of the loop
+// j = 1, j <= 1 true so print 1 star, then we increase the value by 1, now j is 2.
+// Is j less than or equal to 1, no. so we break the loop and go to the next line, after the operation the value of i increases to 2. Is 2 <= m, yes so we enters into the loop again
+
+
+
+// Now here is the important part, we gonna look at j = 1 first, dont be like j = 2 from first iteration, because that first iteration broke already. 
