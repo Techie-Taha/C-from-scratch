@@ -1,0 +1,51 @@
+__1__
+****************Variables
+The first unknown syntax is the setprecision
+like cout << fixed << setpreciiosn(2) << endl; 
+(2) means the number of digits we want our final value to move from the decimal, lets say if we have 5.3333, setpreciison(2) will make it 5.33
+
+___2___
+Math library : #include<cmath> // make sure to include this
+//SQUARE
+#include<cmath>
+#include<iostream> 
+using namespace std;
+int main (){
+
+
+int num = 16;
+
+cout << sqrt(num);// sqrt(num) helps to find the square root of the number
+
+    return 0;
+}
+//POW
+#include<cmath>
+#include<iostream> 
+using namespace std;
+int main (){
+
+
+int x = 16;
+int y = 4;
+
+cout << pow(x, y); // pow works as a power like (x,y) means x^y
+
+    return 0;
+}
+//FABS
+#include<cmath>
+#include<iostream> 
+using namespace std;
+int main (){
+
+
+int x = -16;
+
+
+cout << fabs(x); // gets the absolute value of the number, one value at a time
+
+    return 0;
+}
+
+
