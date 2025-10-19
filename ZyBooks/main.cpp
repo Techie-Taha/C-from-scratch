@@ -1,23 +1,18 @@
 #include<cmath>
+#include<iomanip>
 #include<iostream> 
 using namespace std;
 int main (){
 
 
-int userNum, divNum;
+string num;
+cin >> num;
+cout << "(" << num.substr(0, 3) << ")" << num.substr(4,6) << " -" << num.substr(7,9) << endl;
 
 
 
-cin >> userNum >> divNum;
 
 
-
-for( int i = 1; i <= 3; i++){
-    int userNum = userNum / divNum;
-    cout << userNum << " ";
-    
-}
-cout << endl;
 
 
 
