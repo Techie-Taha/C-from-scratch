@@ -1,22 +1,15 @@
 //#include<cmath>
 //#include<iomanip>
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 int main() {
-   int year;
-   cin >> year;
-  
 
-   
-   if (year % 4 == 0){
-      cout << year << " is a Leap year";
-   }
-   else {
-      cout << year << " is not a Leap year";
-   }
-   
 
+   for( int i = 0; i < 20; i++){
+      cout << (rand() % 10)+10 << endl;
+   }
 
 
 

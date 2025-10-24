@@ -4,7 +4,7 @@ The first unknown syntax is the setprecision
 like cout << fixed << setpreciiosn(2) << endl; 
 (2) means the number of digits we want our final value to move from the decimal, lets say if we have 5.3333, setpreciison(2) will make it 5.33
 
-___2___
+___1___
 Math library : #include<cmath> // make sure to include this
 //SQUARE
 #include<cmath>
@@ -52,6 +52,47 @@ cout << fabs(x); // gets the absolute value of the number, one value at a time
 
 __2__
 ****************Branches
+#include <iostream>
+using namespace std;
+
+int main() {
+   int year;
+   cin >> year;
+  
+
+   
+   if (year % 4 == 0){
+      cout << year << " is a Leap year";
+   }
+   else {
+      cout << year << " is not a Leap year";
+   }
+   
 
 
+
+
+
+   
+   return 0;
+}
+
+__3__
+****************Loops
+
+___1___ ran() function; returns a random integer each time the function is called, in the range 0 to RAND_MAX
+#include <iostream>
+#include <cstdlib> // defines  rand()
+using namespace std;
+
+int main() {
+
+
+   cout << rand() << endl;
+   cout << rand() << endl;
+
+   cout << RAND_MAX << endl; // at least 32767
+
+   return 0;
+}
 
