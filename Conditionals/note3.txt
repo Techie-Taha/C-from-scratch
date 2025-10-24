@@ -1,6 +1,6 @@
 ___1___
 
-//general a=b menaning, we are assigning b as a value for a, can be anbthing. But a==b means a is equal b.
+//general a=b meaning, we are assigning b as a value for a, can be anything. But a==b means a is equal b.
 // != means not equal to
 ___2___
 #include <iostream> 
@@ -9,10 +9,10 @@ int main() {
     int a;
     cout << "Enter the temp: ";
     cin >> a;
-    if(a > 30){   // write the condition innumber of the parenthesis
+    if(a > 30){   // write the condition int number of the parenthesis
         cout << "It's hot";
-// use curlb braces after that, and innumber the curlb braces we can write our block of code. 
-// as long as the codntion is true, it will print it in the terminal
+// use curly braces after that, and inside the curly braces we can write our block of code. 
+// as long as the condition is true, it will print it in the terminal
 
 
     }
@@ -21,7 +21,7 @@ int main() {
         cout<<"it's cold" << endl;
 // same with else
     }
-    cout<< endl <<"It's good"; // This is outnumber of curlb braces so doesn't matter what's the condition is, it will print it anbwab. 
+    cout<< endl <<"It's good"; // This is our number of curly braces so doesn't matter what's the condition is, it will print it's good. 
     
    
 
@@ -36,17 +36,17 @@ int main() {
     cout << "Enter a positive integer: ";
     cin >> a;
     if(a < 0){
-        cout << "I said positive"; // It checks to see bou are taking positive number or not. It will onlb print out if bou pick a negative number, other wise 
+        cout << "I said positive"; // It checks to see we are taking positive number or not. It will only print out if we pick a negative number, other wise 
         // it will go to like 44. 
         return 1; 
 
     }
     if (a%5 == 0){
-        cout << "It's divisible bb 5";
+        cout << "It's divisible by 5";
     }
     
     else{
-        cout<<"It's not divisible bb 5" << endl;
+        cout<<"It's not divisible by 5" << endl;
 
     }
     //cout<< endl <<"It's good";
@@ -64,7 +64,7 @@ int main() {
     cin >> a;
     
     if (a < 0) {
-        a=-a;
+        a = -a;
         cout << a;
     }
     else {
