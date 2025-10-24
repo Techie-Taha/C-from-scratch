@@ -1,20 +1,26 @@
 //#include<cmath>
 //#include<iomanip>
-#include<iostream> 
+#include <iostream>
 using namespace std;
-int main (){
 
-   double x;
+int main() {
+   int year;
+   cin >> year;
+  
 
-   cin >> x;
-   if(x<30.5 || x > 75.5){
-cout << "Skip" << endl;
+   
+   if (year % 4 == 0){
+      cout << year << " is a Leap year";
    }
    else {
-    cout << "Authorize" << endl;
+      cout << year << " is not a Leap year";
    }
+   
 
 
 
-    return 0;
+
+
+   
+   return 0;
 }
