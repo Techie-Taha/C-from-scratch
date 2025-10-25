@@ -304,6 +304,7 @@ else{
 }
 
 ___9___
+find operator
 #include <iostream>
 
 using namespace std;
@@ -326,11 +327,66 @@ else{
    return 0;
 }
 
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "Taha";  // usual string
+   
+  
+
+cout << name.find("h") << endl; // output is 2, like we can also find index individually
+
+   return 0;
+}
+
+___10___
+Insert operator 
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "Taha is bad"; // usual string
 
 
+cout << name.insert(3, "Y"); // output is Tahya like at index 3 where it was a before, now it's y and a got shifted to index 4
+   return 0;
+}
 
 
+___11___
 
+replace operator
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "Taha ahmed"; // started with a string
+
+   cout << name.replace(5, 5, "Grey");
+//cout << name.replace(5(start_postion), 5(length), "Grey(new string)"); we are basically saying start at index 5 where we have ahmed, replace that with grey, an entire different string
+
+
+   return 0;
+}
+
+___12___
+
+
+#include<iostream>
+using namespace std;
+int main(){
+// here's whats happening 
+    string val; 
+    getline(cin, val); // let's say string is funny nose
+    cout << val.substr(3, 4); // 3 here is the beginIndex, like we gonna start at n
+    // 4 here is the length, so including n and spaces we have to print the result. 
+    // output is ny n
+    return 0;
+}
 
 
 
