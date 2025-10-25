@@ -216,11 +216,115 @@ name2.append(3, '!') ;// Rules: name.append(3 means the amount of times you want
  getline(cin, x) reads the entire caption with all words and spaces.
 
 
+___6___
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   char word =  'x'; // we gonna define a char variable. as long as there is an alphabet in it, it will work. 
+
+   if(isalpha(word)){ // thats the format of writing it. 
+      cout << word << " is an alpha character" << endl; // output it's alpha, since it's x
+   }
+
+   else{
+      cout << word << " is not an alpha character" << endl;
+   }
+
+// Lets say we dont to check just an alphabet, but an entire line string. We can use the concept of index. 
+
+string name = "Taha is a good boy";
+if (isalpha(name.at(3))){
+   cout << "Yes alphabetical" << endl;
+}
+else{
+   cout << "not alphabetical" << endl;
+}
 
 
 
+   return 0;
+}
+
+___7___
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   char num =  '2'; // we gonna define a char variable. as long as there is an digit in it, it will work. 
+
+   if(isdigit(num)){ // thats the format of writing it. 
+      cout << num << " is an digit character" << endl; // output it's a digit, since it's 2
+   }
+
+   else{
+      cout << num << " is not an digit character" << endl;
+   }
+
+// Lets say we dont to check just an digit, but an entire line string. We can use the concept of index. 
+
+string num2 = "2345678";
+if (isdigit(num2.at(3))){
+   cout << "Yes digit" << endl;
+}
+else{
+   cout << "not digit" << endl;
+}
 
 
+
+   return 0;
+}
+
+___8___
+toupper, tolower
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   char name1, name2;
+
+   cin >> name1 >> name2;
+
+   if((!isalpha(name1)) && isalpha(name2)){ // here we are saying if name1 is not alpha lets say a digit and name2 is alpha print got em
+cout << "Got em";
+   }
+
+else{
+    name1= tolower(name1); // if both are alpha, we saying print name1 as a lower case, 
+    name2 = toupper(name2); // print name2 as an upper case
+
+    cout << name1 << endl << name2 << endl;
+}
+
+   return 0;
+}
+
+___9___
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "Taha is bad"; // usual string
+   // what find operator does is, they print index. lets say 
+   cout << name.find("is"); // This will print out 5, like find only print the index of the first letter. In this case it's i, not s or is . only i which is 5
+
+   // name.find(good) is equal to npos meaning no position like good is not there.
+   
+   if((name.find("good")) == string::npos ){  // since the condition matches it will print Hi.
+cout << "Hi";
+
+
+}
+else{
+    cout << "bye";
+}
+   return 0;
+}
 
 
 
