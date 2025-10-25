@@ -80,7 +80,7 @@ int main() {
 __3__
 ****************Loops
 
-___1___ ran() function; returns a random integer each time the function is called, in the range 0 to RAND_MAX
+___1___ rand() function; returns a random integer each time the function is called, in the range 0 to RAND_MAX
 #include <iostream>
 #include <cstdlib> // defines  rand()
 using namespace std;
@@ -95,4 +95,179 @@ int main() {
 
    return 0;
 }
+Let's say we have to find all the random numbers between the range from -5 to 5
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+   int count = 0;
+    for(int i = -5; i <= 5; i++){
+      cout << i << endl; // it will list all the randoms
+      
+    }
+   return 0;
+}
+
+Let's say we want to know how many numbers,
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+   int count = 0;
+    for(int i = -5; i <= 5; i++){
+      
+      count++;
+    }
+    cout << count; // 11 number from -5 to 5
+   return 0;
+}
+
+Lets say we don't want to list all the numbers, just couple of them. Let's say print two random number from the range 20-26.
+// formula : (rand() % (max-min+1))+min
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main() {
+   int x1 = (rand() % (26-20+1)) + 20; // output 26 random
+int x2 = (rand() % (26-20+1)) + 20; // 21 random
+   cout << x1 << endl << x2;;
+   return 0;
+}
+
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(){
+
+srand(1); 
+cout << rand() << endl; // 45
+
+
+// without srand(): You get the same sequence. lets say rand() will give you 45 multiple times, but if we do srand(1) and then rand(), 45 will be fixed, wont repeat again
+// let's say srand(2) will print another unique random number;
+
+
+srand(2);
+
+cout << rand(); // 47
+
+   return 0;
+}
+
+___2___
+
+at.() operator which helps to find each index in a string.
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "TAHA"; // started with a string
+
+   cout << name.at(2) << endl; // format: like name.at(2) means go into the string name = "TAHA" and print index 2.
+   name.at(3) = 'x'; // here we are updating A which is index 3, with x. But has to be in char 
+   cout << name;
+
+
+
+   return 0;
+}
+
+__3___
+size operator lets say the string Taha has a legth of 4, how can we determine it?
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name = "Taha"; // started with a string
+
+   cout << name.size(); // format: .size() operator and the output is 4
+   return 0;
+}
+
+___4___ 
+append operator 
+#include <iostream>
+
+using namespace std;
+int main (){
+
+   string name1 = "Nishat"; // started with a string
+string name2 = "Taha";
+// One way to do it  
+   name1.append("!!!") ;// Rules: name.append() adds one string to the end of another. Must be written as a string
+   cout << name1 << endl; // output TAHAxxx
+// second way 
+name2.append(3, '!') ;// Rules: name.append(3 means the amount of times you want to add the char, 'x' means whatever you want to add)
+   cout << name2; // output TAHAxxx
+
+
+   return 0;
+}
+ ___5___
+ getline(cin, x)
+ cin >> x; would read only until the first space; lets Say input: Hello world. cin only reads Hello
+ getline(cin, x) reads the entire caption with all words and spaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
