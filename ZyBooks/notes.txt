@@ -388,13 +388,154 @@ int main(){
     return 0;
 }
 
+__3__
+****************Vector Array
+
+___1___push_back
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+
+    // This is how we write a vector, that's the format.
+    vector<string> foods= {"apple", "mango"}; // We can do direct initialization like create vector with value already in it.
+
+    foods.push_back("Carrot"); // or we can create an empty vector and then by using push back we can store values into it. 
+
+    cout << foods.at(2); // since it's a list we print out each values by using at function like each index
+    // les say in the list, apple is index 0, mango is index 1
+    return 0;
+}
+
+___2___
+Basic with string
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+
+    // This is how we write a vector, that's the format.
+    vector<string> food; // here we are starting with a empty list
+
+food.push_back("Apple"); // by using these we can fill our vector with values
+food.push_back("Mango");
+food.push_back("Kiwi");
+
+food.push_back("Berry");
+
+food.at(0) = "watermelon"; // here we can update the list
+cout << food.at(0);
+    return 0;
+
+}
+
+___3___
+
+vector with for loop
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+
+    // This is how we write a vector, that's the format.
+    vector<string> food; // here we are starting with a empty list
+
+food.push_back("Apple"); // by using these we can fill our vector with values
+food.push_back("Mango");
+food.push_back("Kiwi");
+
+food.push_back("Berry");
+
+food.at(0) = "watermelon";
+
+for(int i = 0; i < food.size(); i++){
+    cout << food.at(i) << endl;
+}
 
 
 
+    return 0;
+
+}
+
+___4___vector with int
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+
+    
+    vector<int> num; // with int values
+
+num.push_back(1); // by using these we can fill our vector with values
+num.push_back(2);
+num.push_back(3);
+
+num.push_back(4);
+
+num.at(0) = 7;
+
+for(int i = 0; i < num.size(); i++){
+    cout << num.at(i) << endl;
+}
 
 
 
+    return 0;
 
+}
+
+
+___5___
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+
+    
+    vector<int> num(4); // we can also declare a vector with 4 elements.
+
+num.push_back(1); // by using these we can fill our vector with values
+num.push_back(2);
+num.push_back(3);
+
+num.push_back(4);
+
+num.at(0) = 7;
+
+for(int i = 0; i < num.size(); i++){
+    cout << num.at(i) << endl;
+}
+
+
+
+    return 0;
+
+}
+
+___6___ initialization first
+#include<iostream>
+#include<vector>
+using namespace std;
+int main (){
+    vector<int> num(4); // we can also declare a vector with 4 elements.
+
+// but each vector element is initialized with the default value of 0.
+// But we can always update the value like this
+
+num.at(3) = 5;
+
+cout << num.at(0) << endl;
+cout << num.at(1) << endl;
+cout << num.at(2) << endl;
+cout << num.at(3) << endl; // instead of 0, now it's 5 since we updated 
+
+    return 0;
+
+}
+___7___
 
 
 
