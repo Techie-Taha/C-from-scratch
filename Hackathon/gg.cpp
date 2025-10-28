@@ -27,12 +27,18 @@ int main(){
 
 // Step 1 : a frequency analysis showing the counts of every letter of your team's encrypted text
 
-    string toVoidrepetition = "";
+/***********
+  Some ideas were taken from a youtube video:
+  CodeWithBK
+  https://youtu.be/8Sl92uxK9Ac?si=9IIpkZV9OfTUyExx
+  Created: April, 2024
+***********/
+    string toVoidrepetition = ""; // to store letters that have already been counted
 
     for(int i = 0; i < encrypted.size(); i++){
         if(isalpha(encrypted.at(i))){
         char x = tolower(encrypted.at(i)); 
-        if(toVoidrepetition.find(x) == string::npos){
+        if(toVoidrepetition.find(x) == string::npos){ // This line is important because it checks if the characterhasn't been counted yet
 
             int count = 0;
 
@@ -48,6 +54,10 @@ int main(){
         }
     }
 }
+
+// Step 2 : the correct original (decrypted) English plaintext
+
+
 
     return 0;
 }
