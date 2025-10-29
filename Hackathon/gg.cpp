@@ -56,7 +56,66 @@ cout << "A frequency analysis showing the counts of every letter of our team's e
     cout << endl;
 
 // Step 2 and 3 : the correct original (decrypted) English plaintext, 
-    string correctText, correctKey; 
+    string correctText, correctKey;
+    int highestScore = 0; // 
+
+    bool firstKey = true; // Boolean works better since we have to check each keys and using the concept of score, we can compare it
+// We going run a loop inside the vector keys
+    for(int k = 0; k < keys.size(); k++){
+        string currentKey = keys.at(k);
+        string decrypted; // empty string is going to hold our decrypted text
+        for(int i = 0; i < updated_cipherText.size(); i++){
+            char firstLetter = updated_cipherText.at(i);
+            char key = currentKey.at(i % currentKey.size());
+// formula :
+            int num = (updated_cipherText.at(i) - 'A' - (key - 'a') + 26) % 26;
+            decrypted += + 'A' + num;
+
+        }
+/* -----
+This code was written with the aid of ChatGPT;
+when prompted 'how to score the decrypted text based on English letter frequency?'
+the generated text helped me write the following code:
+accessed: Oct. 2025
+ -------- */
+
+        int currentScore = 0;
+        for(int i = 0; i < decrypted.size(); i++){
+
+            char letter = decrypted.at(i);
+            if(letter == 'E' || letter == 'T' || letter == 'A' || letter == 'O' || letter == 'I' || letter == 'N'){
+                currentScore = currentScore + 10;
+            }
+        }
+
+        
+        int perfectScore = currentScore > highestScore;
+        if(firstKey || perfectScore){
+
+            highestScore = currentScore;
+            correctKey = currentKey;
+            correctText = decrypted;
+            firstKey = false;
+
+        }
+    }    
+
+    string finalText; // empty string
+
+    for(int i = 0; i < correctText.size(); i++){
+        finalText = finalText + correctText.at(i);
+
+
+// since the original text was 4 characters, lets make it 5, just an arbitrary
+         if(i % 5 == 4) { 
+           finalText += ' ';
+         }
+
+    }
+    cout << "The correct English plain text: " << finalText << endl;
+
+    cout << "Best Key: " << correctKey << endl;
+
 
 
 

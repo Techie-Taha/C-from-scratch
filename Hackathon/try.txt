@@ -1,0 +1,17 @@
+// here's how the logic works:
+string correctText, correctKey;
+    int highestScore = 0; // 
+
+    bool firstKey = true; // Boolean works better since we have to check each keys and using the concept of score, we can compare it
+// We going run a loop inside the vector keys
+    for(int k = 0; k < keys.size(); k++){
+        string currentKey = keys.at(k);
+        string decrypted; // empty string is going to hold our decrypted text
+        for(int i = 0; i < updated_cipherText.size(); i++){
+            char firstLetter = updated_cipherText.at(i);
+            char key = currentKey.at(i % currentKey.size());
+// formula :
+            int num = (updated_cipherText.at(i) - 'A' - (key - 'a') + 26) % 26;
+            decrypted += + 'A' + num;
+
+        }ce we have to iterate through each keys to see whi
