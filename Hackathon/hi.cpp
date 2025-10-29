@@ -43,29 +43,59 @@ int main() {
         cout << char('A' + i) << ": " << frequency.at(i) << endl;
     }
     cout << endl;
-    string bestPlaintext,bestKey;
-int bestScore=-1000000;
-for(int k=0;k<possibleKeys.size();k++){
-    string decrypted;
-    for(i=0;i<processedCiphertext.size();i++){
-        char c=processedCiphertext.at(i);
-        char kc=possibleKeys.at(k).at(i%possibleKeys.at(k).size());
-        decrypted+='A'+(c-'A'-(kc-'a')+26)%26;
-    }
-    int score=0;
-    for(i=0;i<decrypted.size();i++){
-        char c=decrypted.at(i);
-        if(c=='E'||c=='T'||c=='A'||c=='O'||c=='I'||c=='N') score+=10;
-    }
-    if(score>bestScore){bestScore=score;bestKey=possibleKeys.at(k);bestPlaintext=decrypted;}
-}
 
-cout<<"Decrypted English Plaintext:"<<endl<<"============================"<<endl;
-string formattedPlaintext;
-for(i=0;i<bestPlaintext.size();i++){
-    formattedPlaintext+=bestPlaintext.at(i);
-    if((i+1)%5==0) formattedPlaintext+=' ';
-}
-cout<<formattedPlaintext<<endl<<endl<<"Discovered Key: "<<bestKey<<endl<<"================="<<endl;
-return 0;
+    string bestPlaintext;
+    string bestKey;
+    int bestScore = -1000000;
+    int k;
+    
+    for (k = 0; k < possibleKeys.size(); k++) {
+        string currentKey = possibleKeys.at(k);
+        string decrypted;
+        decrypted.resize(processedCiphertext.size());
+        
+        for (i = 0; i < processedCiphertext.size(); i++) {
+            if (isalpha(processedCiphertext.at(i))) {
+                char cipherChar = processedCiphertext.at(i);
+                char keyChar = currentKey.at(i % currentKey.size());
+                int cipherNum = cipherChar - 'A';
+                int keyNum = keyChar - 'a';
+                int plainNum = (cipherNum - keyNum + 26) % 26;
+                decrypted.at(i) = 'A' + plainNum;
+            }
+        }
+
+        int score = 0;
+        for (i = 0; i < decrypted.size(); i++) {
+            if (isalpha(decrypted.at(i))) {
+                char c = decrypted.at(i);
+                if (c == 'E' || c == 'T' || c == 'A' || c == 'O' || c == 'I' || c == 'N') {
+                    score += 10;
+                }
+            }
+        }
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestKey = currentKey;
+            bestPlaintext = decrypted;
+        }
+    }
+
+    cout << "Decrypted English Plaintext:" << endl;
+    cout << "============================" << endl;
+    
+    string formattedPlaintext;
+    for (i = 0; i < bestPlaintext.size(); i++) {
+        formattedPlaintext += bestPlaintext.at(i);
+        if ((i + 1) % 5 == 0) {
+            formattedPlaintext += ' ';
+        }
+    }
+    cout << formattedPlaintext << endl << endl;
+
+    cout << "Discovered Key: " << bestKey << endl;
+    cout << "=================" << endl;
+
+    return 0;
 }
