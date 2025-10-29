@@ -57,7 +57,7 @@ cout << "A frequency analysis showing the counts of every letter of our team's e
 
 // Step 2 and 3 : the correct original (decrypted) English plaintext, 
     string correctText, correctKey;
-    int highestScore = 0; // 
+    int highestScore = 0; // it's a value we will use later to do comparison
 
     bool firstKey = true; // Boolean works better since we have to check each keys and using the concept of score, we can compare it
 // We going run a loop inside the vector keys
@@ -88,7 +88,7 @@ accessed: Oct. 2025
             }
         }
 
-        
+
         int perfectScore = currentScore > highestScore;
         if(firstKey || perfectScore){
 

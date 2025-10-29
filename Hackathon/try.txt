@@ -1,17 +1,18 @@
-// here's how the logic works:
-string correctText, correctKey;
-    int highestScore = 0; // 
+since we have to iterate through each keys to see which one fits, we can declare a boolean value
 
-    bool firstKey = true; // Boolean works better since we have to check each keys and using the concept of score, we can compare it
-// We going run a loop inside the vector keys
-    for(int k = 0; k < keys.size(); k++){
-        string currentKey = keys.at(k);
-        string decrypted; // empty string is going to hold our decrypted text
-        for(int i = 0; i < updated_cipherText.size(); i++){
-            char firstLetter = updated_cipherText.at(i);
-            char key = currentKey.at(i % currentKey.size());
-// formula :
-            int num = (updated_cipherText.at(i) - 'A' - (key - 'a') + 26) % 26;
-            decrypted += + 'A' + num;
+1. bool firstKey = true; like set it equals to true; and then we will compare it like later one
 
-        }ce we have to iterate through each keys to see whi
+then we will declare another container which will hold all the our possible keys;
+
+but first we gonna run a loop that goes through each key one by one.
+2. for(int k = 0; k < keys.size(); k++){
+
+    // container 
+    string currentKey = keys.at(i); // now this have the current key we are testing like when k = 27, current key = ablaze
+
+    // another string container decrypt to store decrypted text for that specific key
+
+    
+
+
+}
