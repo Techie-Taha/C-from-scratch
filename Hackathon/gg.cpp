@@ -106,7 +106,7 @@ accessed: Oct. 2025
         finalText = finalText + correctText.at(i);
 
 
-// since the original text was 4 characters, lets make it 5, just an arbitrary
+// since the original text was 4 characters, lets make it 4 as well, just an arbitrary
          if(i % 5 == 4) { 
            finalText += ' ';
          }
