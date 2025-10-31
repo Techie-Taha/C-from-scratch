@@ -19,7 +19,7 @@ int main() {
   unsigned long seed = time(0);     
   unsigned long a = 1664525;         
   unsigned long c = 1013904223;      
-  unsigned long m = 4294967296;
+  unsigned long long m = 4294967296;
 
   cout << "Enter the phrase you would like to encrypt: " << endl;
   getline(cin, phrase);
