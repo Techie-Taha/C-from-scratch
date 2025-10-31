@@ -13,6 +13,7 @@ int main(){
     int option;
 
     cin >> option;
+    cin.ignore(); /* ----- This line was taken from ChatGPT; when prompted how to fix input buffering issue,  accesed: Oct. 2025 -----*/
 
     if(option == 1){
 
@@ -123,83 +124,88 @@ and then our first key becomes false;
 
     else if(option == 2){
 
-        string phrase;
+        //initialize variables and vectors to be used, like for storing the keys and the encrypted/decrypted text
+  string phrase;
   vector<int> keys;
   string encryptedText = "";
   string decryptedText = "";
+  string yn;
   int i;
   int firstKey = 24;
   int randomKey;
   int previousKey;
 
-  unsigned long seed = time(0);     
-  unsigned long a = 1664525;         
-  unsigned long c = 1013904223;      
-  unsigned long long m = 4294967296;
+  //Used unsigned long long to remove the warning of comparison
+  unsigned long long seed = time(0);  // used gen AI to come up with the idea of using current time as seed for pseudo-random number generation 
 
-  cout << "Enter the phrase you would like to encrypt: " << endl;
+  //initialize constants to be used for key generation
+  int a = 16642;         
+  int c = 10139;      
+  int m = 4294;
+
+  //Prompt user for phrase to encrypt
+  cout << endl << "Enter the phrase you would like to encrypt: ";
   getline(cin, phrase);
 
-
+  //Resize vector to phrase size
   keys.resize(phrase.size());
 
+  //Loop through each character in the phrase to generate keys and encryption
   for (i = 0; i < phrase.size(); i++){
+    //Check for alphabetic character
     if (isalpha(phrase.at(i))) 
     {
+      //use seed, constants, and other operations to generate pseudo-random key
+      seed = (a * seed + c) % m;
+      unsigned long mixed = seed + (phrase.at(i) * i * 42) + previousKey;
+      randomKey = mixed % 26;
+      /*
+      Used gen AI to help come up with a way to generate pseudo-random numbers, which used the current time as seed and other constants, replicating the linear congruential generator method.
+      */
+      //ad key to vector
+      keys.at(i) = randomKey;
+
+      //keep setting previousKey to use in algorithm
+      if(i == 0)
+      {
+        previousKey = firstKey;
+      }
+      else
+      {
+        previousKey = keys.at(i - 1);
+      }
+
+      //checks for letter case and subtracts accordingly
       if (isupper(phrase.at(i))) 
       {
-        if(i == 0)
-        {
-          previousKey = firstKey;
-        }
-        else
-        {
-          previousKey = keys.at(i - 1);
-        }
-
-        seed = (a * seed + c) % m;
-        unsigned long mixed = seed + (phrase.at(i) * i * 42) + previousKey;
-        randomKey = mixed % 26;
-        keys.at(i) = randomKey;
         encryptedText.push_back((phrase.at(i) - 'A' + randomKey) % 26 + 'A');
       } 
       else if (islower(phrase.at(i))) 
       {
-        if(i == 0)
-        {
-          previousKey = firstKey;
-        }
-        else
-        {
-          previousKey = keys.at(i - 1);
-        }
-
-        seed = (a * seed + c) % m;
-        unsigned long mixed = seed + (phrase.at(i) * i * 42) + previousKey;
-        randomKey = mixed % 26;
-        keys.at(i) = randomKey;
         encryptedText.push_back((phrase.at(i) - 'a' + randomKey) % 26 + 'a');
       }
     } 
     else 
     {
-
+      //If not alphabetic, dont do anything and make key 0
       encryptedText.push_back(phrase.at(i));
     }
   }
 
-  cout << "Encrypted Text: " << encryptedText << endl << "Keys: ";
+  //Output encrypted text and keys
+  cout << endl << "Encrypted Text: " << encryptedText << endl << endl << "Keys: ";
   for(i = 0; i < keys.size(); i++){
     if(i == keys.size() - 1)
     {
-        cout << keys.at(i);
+      cout << keys.at(i);
     }
     else
     {
-        cout << keys.at(i) << ", ";
+      cout << keys.at(i) << ", ";
     }
   }
 
+  //Loop through each character in the encrypted text to decrypt
   for (i = 0; i < encryptedText.size(); i++) 
   {
 
@@ -217,14 +223,25 @@ and then our first key becomes false;
     } 
     else 
     {
-
-      decryptedText.push_back(encryptedText.at(i));
+    decryptedText.push_back(encryptedText.at(i));
     }
   }
 
-  cout << endl << "Decrypted text: " << decryptedText << endl;
+  //Ask user if they want to see the decrypted text and output accordingly
+  cout << endl << endl << "Would you like to see the decrypted text? (y/n): ";
+  cin >> yn;
 
-    }
+  if( yn == "y" || yn == "Y" ) {
+    cout << endl << "Decrypted text: " << decryptedText << endl << endl;
+  }
+  else {
+    cout << endl << "Goodbye!" << endl << endl;
+  }
+}
+
+else{
+  cout << "Input out of the range" << endl;
+}
 
 
     return 0;
